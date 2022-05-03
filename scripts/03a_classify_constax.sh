@@ -10,10 +10,12 @@
 
 ########## Command Lines to Run ##########
 
+cd ~/He_Lab/16S-Cas9-Seq/
+
 for i in nd58 cas9d58 gp711
 do
   constax -c 0.8 -t \
-  -b -i otus_R1_$i.fasta \
+  -b -i ./exported-feature-table/rep-seqs_1_$i/dna-sequences.fasta \
   -n $SLURM_CPUS_PER_TASK \
   -d /mnt/ufs18/rs-022/bonito_lab/CONSTAX_May2020/SILVA_Bacteria_tf/SILVA_138_SSURef_tax_silva_bact.fasta \
   -f /mnt/ufs18/rs-022/bonito_lab/CONSTAX_May2020/SILVA_Bacteria_tf --mem $SLURM_MEM_PER_NODE -m 20 \
