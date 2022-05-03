@@ -5,7 +5,7 @@
 #SBATCH --ntasks=1                 # number of tasks - how many tasks (nodes) that you require (same as -n)
 #SBATCH --cpus-per-task=1          # number of CPUs (or cores) per task (same as -c)
 #SBATCH --mem=10G                   # memory required per node - amount of memory (in bytes)
-#SBATCH --job-name=16S-cas9-seq_filter_trim        # you can give your job a name for easier identification (same as -J)
+#SBATCH --job-name=16S-cas9-seq_filter_trim_cluster        # you can give your job a name for easier identification (same as -J)
 #SBATCH --output=%x-%j.SLURMout
 
 ########## Command Lines to Run ##########
@@ -17,13 +17,13 @@ conda activate qiime2-2020.8
 for i in nd58 cas9d58 gp711
 do
   qiime tools import \
-    --type 'SampleData[SequencesWithQuality]' \
+    --type 'SampleData[PairedEndSequencesWithQuality]' \
     --input-path ./data/raw_fastq/$i \
     --input-format CasavaOneEightSingleLanePerSampleDirFmt \
-    --output-path demux-single-end-$i.qza
+    --output-path demux-paired-end-$i.qza
 
   qiime dada2 denoise-paired \
-    --i-demultiplexed-seqs demux-single-end-$i.qza \
+    --i-demultiplexed-seqs demux-paired-end-$i.qza \
     --p-trunc-len-f 235\
     --p-trunc-len-r 235\
     --p-trim-left-f 19 \
