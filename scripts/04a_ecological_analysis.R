@@ -116,7 +116,7 @@ hl_table_prop %>%
        y = "Proportion of reads",
        fill = "High-Level Classification") -> hl_bar_all
 hl_bar_all
-ggsave("./plots/high_level_barplot_with_host.png", hl_bar_all)
+ggsave("./plots/high_level_barplot_with_host.png", hl_bar_all, width=8, height=4)
 
 hl_table_prop %>%
   filter(! High_level_taxonomy %in% c("Chloroplast", "Mitochondria")) %>%
@@ -134,9 +134,9 @@ hl_table_prop %>%
         legend.position = "right") +
   labs(x = "Sample",
        y = "Proportion of reads",
-       fill = "High-Level Classification") -> hl_bar_nonhost
+       fill = "Phylum") -> hl_bar_nonhost
 hl_bar_nonhost
-ggsave("./plots/high_level_barplot_without_host.png", hl_bar_nonhost)
+ggsave("./plots/high_level_barplot_without_host.png", hl_bar_nonhost, width=8, height=4)
 
 hl_table_prop %>%
   pivot_longer(cols = starts_with("JL_"),
