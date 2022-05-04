@@ -17,19 +17,20 @@ conda activate qiime2-2020.8
 
 for i in nd58 cas9d58 gp711
 do
+  # i=nd58
   # qiime metadata tabulate \
   #   --m-input-file feature_table/dada2-stats_1_$i.qza \
-  #   --o-visualization feature_table/dada2-stats_1.qzv
+  #   --o-visualization feature_table/dada2-stats_1_$i.qzv
   #
   # # Visualize feature table 1 data summaries
   # qiime feature-table summarize \
   #   --i-table feature_table/table_1_$i.qza \
-  #   --m-sample-metadata-file sample-metadata.tsv \
-  #   --o-visualization feature_table/table_1.qzv
+  #   --m-sample-metadata-file sample-metadata_$i.tsv \
+  #   --o-visualization feature_table/table_1_$i.qzv
   #
   # qiime feature-table tabulate-seqs \
   #   --i-data feature_table/rep-seqs_1_$i.qza \
-  #   --o-visualization feature_table/rep-seqs_1.qzv
+  #   --o-visualization feature_table/rep-seqs_1_$i.qzv
 
   qiime tools export \
     --input-path feature_table/rep-seqs_1_$i.qza \

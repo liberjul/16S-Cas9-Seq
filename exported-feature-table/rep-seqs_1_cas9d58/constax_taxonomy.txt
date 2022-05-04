@@ -1,0 +1,11 @@
+OTU_ID	Rank_1	Rank_2	Rank_3	Rank_4	Rank_5	Rank_6	Rank_7	Rank_8	High_level_taxonomy	HL_hit_percent_id	HL_hit_query_cover	Consistent_hierarchy
+31c0d15f6f0c1ce3ba694ce95b749f92	Bacteria_1	Cyanobacteria_1	Cyanobacteriia_1	Chloroplast_1					Chloroplast	100.000	100	0
+77b42327a419350fd71049f17237c3ed	Bacteria_1	Proteobacteria_1	Gammaproteobacteria_1	Pseudomonadales_1	Pseudomonadaceae_1	Pseudomonas_1			Bacteria_Proteobacteria	100.000	100	0
+532871e414f8ab8a15a7b332e5e2f0e6	Bacteria_1	Cyanobacteria_1	Cyanobacteriia_1	Chloroplast_1					Chloroplast	100.000	100	0
+fbc8dd5af6f18c65eb960940170e5c71	Bacteria_1	Cyanobacteria_1	Cyanobacteriia_1	Chloroplast_1					Chloroplast	98.367	96	0
+a66b881ef7d92e9f666bfaa34441fe33	Bacteria_1	Proteobacteria_1	Alphaproteobacteria_1	Rickettsiales_1	Mitochondria_1				Mitochondria	100.000	100	0
+7c87ba8d668bbbe60240c95affcfc46b	Bacteria_1	Proteobacteria_1	Gammaproteobacteria_1	Pseudomonadales_1	Pseudomonadaceae_1	Pseudomonas_1			Bacteria_Proteobacteria	100.000	100	0
+b030d6a482804d04156cf9d929cbf663	Bacteria_1	Proteobacteria_1	Gammaproteobacteria_1	Enterobacterales_1	Enterobacteriaceae_1	Escherichia-shigella_1			Bacteria_Proteobacteria	100.000	100	0
+c0f2ab2f6345b03c28d557d47cddfc04	Bacteria_1	Proteobacteria_1	Alphaproteobacteria_1	Rickettsiales_1	Mitochondria_1				Mitochondria	99.196	100	0
+be2b1f0f0b2d26fcf85939d75d5abf2c	Bacteria_1	Proteobacteria_1	Alphaproteobacteria_1	Rickettsiales_1	Mitochondria_1				Mitochondria	98.928	100	0
+6c47de5bcfb1382bf699fadfc6f3e62a	Bacteria_1	Actinobacteriota_1	Actinobacteria_1	Corynebacteriales_1	Corynebacteriaceae_1	Corynebacterium_1			Bacteria_Actinobacteriota	100.000	100	0
