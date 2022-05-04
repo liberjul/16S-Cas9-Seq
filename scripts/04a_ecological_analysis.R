@@ -198,7 +198,7 @@ gen_top %>%
   pivot_longer(cols = starts_with("JL_"),
                names_to = "library_name") %>%
   left_join(method_df, by="library_name") %>%
-  ggplot(aes(fill=Genus, color = Genus, y = value, x = sample_name)) +
+  ggplot(aes(fill=Genus, color = Genus, y = value, x = factor(sample_name, levels = c("Endo-61", "Endo-62", "Endo-63", "Total-161", "Total-162", "Total-163", "Neg Con")))) +
   geom_bar(position="fill", stat="identity") +
   facet_grid(~method,
              switch = "x",
