@@ -59,6 +59,7 @@ method_df <- data.frame(sample = 1:19, method = factor(c(rep("No digest 515F-806
                                                                   "Gel purify 799F-1193R")),
                         sample_name = c(rep(c("Endo-61", "Endo-62", "Endo-63", "Total-161", "Total-162", "Total-163"), 3),
                                         "Neg Con")) %>%
+  mutate(sample_name = factor(sample_name, levels = c("Endo-61", "Endo-62", "Endo-63", "Total-161", "Total-162", "Total-163", "Neg Con"))) %>%
   mutate(library_name = paste("JL", str_pad(sample, 2, pad="0"), sep = "_")) %>%
   dplyr::select(library_name, sample_name, method)
 
