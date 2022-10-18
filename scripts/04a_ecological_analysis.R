@@ -64,7 +64,7 @@ method_df <- data.frame(sample = 1:19, method = factor(c(rep("No digest 515F-806
   dplyr::select(library_name, sample_name, method)
 
 hl_table <- comb_all %>%
-  select(c(High_level_taxonomy, starts_with("JL_"))) %>%
+  dplyr::select(c(High_level_taxonomy, starts_with("JL_"))) %>%
   mutate(High_level_taxonomy = str_remove(High_level_taxonomy, "Bacteria_")) %>%
   group_by(High_level_taxonomy) %>%
   summarise(across(starts_with("JL_"), ~ sum(.x, na.rm = T)))
